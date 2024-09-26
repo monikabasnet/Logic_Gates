@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Voltage Bulb Demo with Logic Gates</title>
+</head>
+<body>
+    <h1>Voltage Bulb Demonstration</h1>
+    <h4><p>Light the bulb with logic gates. Follow the instructions below:</p>
+    <p>First select the logicgate of your choice. Example: AND , OR</p>
+    <p>Select either high voltage or low volatage for input 1.</p>
+    <p>Select either high voltage or low volatage for input 2.</p>
+    <p>Hit the check logic button to see if your light bulb glows.</p></h4>
+
+    <div class="container">
+
+        <div class="gate-selection">
+            <h2>Select Logic Gate:</h2>
+            <button class="gate-btn" onclick="setGate('AND')">AND</button>
+            <button class="gate-btn" onclick="setGate('OR')">OR</button>
+            <button class="gate-btn" onclick="setGate('XOR')">XOR</button>
+            <button class="gate-btn" onclick="setGate('NAND')">NAND</button>
+            <button class="gate-btn" onclick="setGate('NOR')">NOR</button>
+            <button class="gate-btn" onclick="setGate('XNOR')">XNOR</button>
+        </div>
+        
+        <div class="input-container">
+            <div>
+                <h3>Input 1:</h3>
+                <button class="input-btn" onclick="setInput(1, 1)">High Voltage (1)</button>
+                <button class="input-btn" onclick="setInput(0, 1)">Low Voltage (0)</button>
+            </div>
+            <div>
+                <h3>Input 2:</h3>
+                <button class="input-btn" onclick="setInput(1, 2)">High Voltage (1)</button>
+                <button class="input-btn" onclick="setInput(0, 2)">Low Voltage (0)</button>
+            </div>
+        </div>
+    
+        <div class="bulb" id="bulb">
+            <div class="bulb-glass" id="bulb-glass">
+                <div class="bulb-filament" id="bulb-filament"></div>
+            </div>
+            <div class="bulb-base"></div>
+        </div>
+    
+        <button class="check-button" onclick="checkLogic()">Check Logic</button>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
